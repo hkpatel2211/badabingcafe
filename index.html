@@ -447,7 +447,7 @@
 
 <script>
   (function(){
-    emailjs.init("wkitaZe_XKRSVV_g6"); // your EmailJS public key
+    emailjs.init("RnudThVbhYK-ece6f"); // your EmailJS public key
   })();
 
   const form = document.getElementById("contactForm");
@@ -455,28 +455,28 @@
   form.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    // Step 1: Send Thank You Email to User
-    emailjs.sendForm("service_fn4fh4u","Event_Email", this)
+    // --- Send Thank You Email to Customer (template already has message) ---
+    emailjs.sendForm("service_fn4fh4u",Event_Email, this)
       .then(() => {
-        console.log("✅ Thank you email sent to user");
-      }, (err) => {
-        console.error("❌ User email error:", err);
+        console.log("✅ Customer thank you email sent");
+      })
+      .catch((err) => {
+        console.error("❌ Customer email error:", err);
       });
 
-    // Step 2: Send Details to Owner
+    // --- Send Details Email to Owner (template already has fields ready) ---
     emailjs.sendForm("service_fn4fh4u","Event_Owener", this)
       .then(() => {
-        // ✅ Show SweetAlert Popup
         Swal.fire({
           icon: 'success',
           title: 'Message Sent Successfully 🎉',
           text: 'Thank you for contacting Badabing Café! We’ll get back soon.',
           showConfirmButton: false,
-          timer: 3000, // popup disappears after 3 seconds
+          timer: 3000,
         });
-
         form.reset();
-      }, (err) => {
+      })
+      .catch((err) => {
         Swal.fire({
           icon: 'error',
           title: 'Oops!',
@@ -484,6 +484,7 @@
         });
         console.error("Owner email error:", err);
       });
+
   });
 </script>
  
