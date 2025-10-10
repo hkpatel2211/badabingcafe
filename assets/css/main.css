@@ -1930,11 +1930,16 @@ section,
     .form-group textarea:focus {
       border-color:var(--accent-color);
     }
+ .form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* ensures consistent spacing */
+}
 
   .form-section .btn-event {
       display: block;
-   width: 100%;
-   text-align: center;
+      width: 100%;
+      text-align: center;
       padding: 12px 20px;
       border: none;
       border-radius: 5px;
@@ -1973,11 +1978,7 @@ section,
       position: relative;
       z-index: 1;
     }
-  .form-section form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* ensures consistent spacing */
-}
+ 
     @media(max-width: 900px) {
       .container-event {
         flex-direction: column;
