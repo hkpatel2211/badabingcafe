@@ -456,7 +456,7 @@
     event.preventDefault();
 
     // --- Send Thank You Email to Customer (template already has message) ---
-    emailjs.sendForm("service_fn4fh4u",Event_Email, this)
+    emailjs.sendForm("service_fn4fh4u","Event_Email", this)
       .then(() => {
         console.log("✅ Customer thank you email sent");
       })
