@@ -1931,7 +1931,10 @@ section,
       border-color:var(--accent-color);
     }
 
-   .btn-event {
+  .form-section .btn-event {
+      display: block;
+   width: 100%;
+   text-align: center;
       padding: 12px 20px;
       border: none;
       border-radius: 5px;
@@ -1945,7 +1948,7 @@ section,
       border: 1px solid #ccc;
     }
 
-    .btn-event::before {
+  .form-section  .btn-event::before {
       content: "";
       position: absolute;
       top: -100%;
@@ -1957,20 +1960,24 @@ section,
       transition: top 0.4s ease;
     }
 
-    .btn-event:hover::before {
+   .form-section .btn-event:hover::before {
       top: 0;
     }
 
-    .btn-event:hover {
+  .form-section  .btn-event:hover {
       color: white;
       border-color: red;
     }
 
-    .btn-event span {
+  .form-section  .btn-event span {
       position: relative;
       z-index: 1;
     }
-
+  .form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* ensures consistent spacing */
+}
     @media(max-width: 900px) {
       .container-event {
         flex-direction: column;
