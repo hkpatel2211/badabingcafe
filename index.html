@@ -447,7 +447,7 @@
 
 <script>
   (function(){
-    emailjs.init("qQ5pI6RN5WpXgKDPr"); // your EmailJS public key
+    emailjs.init("wkitaZe_XKRSVV_g6"); // your EmailJS public key
   })();
 
   const form = document.getElementById("contactForm");
@@ -456,7 +456,7 @@
     event.preventDefault();
 
     // Step 1: Send Thank You Email to User
-    emailjs.sendForm("service_sxmfv1l","Event_Email", this)
+    emailjs.sendForm("service_fn4fh4u","Event_Email", this)
       .then(() => {
         console.log("✅ Thank you email sent to user");
       }, (err) => {
@@ -464,7 +464,7 @@
       });
 
     // Step 2: Send Details to Owner
-    emailjs.sendForm("service_sxmfv1l","Event_Owener", this)
+    emailjs.sendForm("service_fn4fh4u","Event_Owener", this)
       .then(() => {
         // ✅ Show SweetAlert Popup
         Swal.fire({
