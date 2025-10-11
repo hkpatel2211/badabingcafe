@@ -1988,4 +1988,39 @@ section,
        
       }
     }
+.uber-eats-btn{
+  display: inline-flex;
+  flex-direction: rows;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  text-decoration: none;
+  background: var(--surface-color);
+  padding: 8px 8px;
+  border-radius: 2px;
+  box-shadow: 0 4px 10px rgba(2,6,8,0.5);
+  min-width: 72px;
+  /* transition: transform .12s ease, box-shadow .12s ease; */
+ 
+}
+
+/* small "Uber" text (white) */
+.uber-eats-btn .ue-uber{
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+/* big "Eats" text (green) */
+.uber-eats-btn .ue-eats{
+  color: #1bae31;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+}
+
+
+
 
