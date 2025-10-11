@@ -443,11 +443,9 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 
-
-
-<script>
+ <script>
   (function(){
-    emailjs.init("RnudThVbhYK-ece6f"); // your EmailJS public key
+    emailjs.init("wkitaZe_XKRSVV_g6"); // your EmailJS public key
   })();
 
   const form = document.getElementById("contactForm");
@@ -456,7 +454,7 @@
     event.preventDefault();
 
     // --- Send Thank You Email to Customer (template already has message) ---
-    emailjs.sendForm("service_sxmfv1l","Event_Email", this)
+    emailjs.sendForm("service_fn4fh4u","Event_Email", this)
       .then(() => {
         console.log("✅ Customer thank you email sent");
       })
@@ -465,7 +463,7 @@
       });
 
     // --- Send Details Email to Owner (template already has fields ready) ---
-    emailjs.sendForm("service_sxmfv1l","Event_Owener", this)
+    emailjs.sendForm("service_fn4fh4u","Event_Owener", this)
       .then(() => {
         Swal.fire({
           icon: 'success',
@@ -487,6 +485,8 @@
 
   });
 </script>
+
+
  
 
 </body>
